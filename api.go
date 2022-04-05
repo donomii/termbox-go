@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 package termbox
@@ -195,7 +196,7 @@ func Flush() error {
 			if w == 0 || w == 2 && runewidth.IsAmbiguousWidth(back.Ch) {
 				w = 1
 			}
-			if *back == *front {
+			if *back == *front && back.Ch == ' ' {
 				x += w
 				continue
 			}
