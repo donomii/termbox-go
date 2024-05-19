@@ -375,7 +375,6 @@ func PollRawEvent(data []byte) Event {
 
 // Wait for an event and return it. This is a blocking function call.
 func PollEvent() Event {
-	// Constant governing macOS specific behavior. See https://github.com/nsf/termbox-go/issues/132
 	// This is an arbitrary delay which hopefully will be enough time for any lagging
 	// partial escape sequences to come through.
 	const esc_wait_delay = 100 * time.Millisecond
