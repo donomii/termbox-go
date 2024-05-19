@@ -4,7 +4,7 @@ import "os"
 import "time"
 import "fmt"
 
-import "github.com/nsf/termbox-go"
+import "github.com/donomii/termbox-go"
 import "github.com/mattn/go-runewidth"
 
 func main() {
